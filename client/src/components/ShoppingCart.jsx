@@ -27,7 +27,7 @@ function ShoppingCart({
           {items.map((item) => (
             <li
               key={item.id}
-              className={`item ₹{selectedId === item.id ? "selected" : ""}`}
+              className={`item ${selectedId === item.id ? "selected" : ""}`}
               onClick={() => onSelect(item)}
             >
               <div className="item-info">
@@ -60,7 +60,7 @@ function ShoppingCart({
       )}
 
       {items.length > 0 && (
-        <div className="total">Total ₹: {total.toFixed(2)}</div>
+        <div className="total">Total: ₹{total.toFixed(2)}</div>
       )}
     </div>
   );

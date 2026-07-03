@@ -38,7 +38,7 @@ function App() {
 
   const handleSubmit = async (data) => {
     if (editingItem) {
-      const res = await fetch(`₹{API}/₹{editingItem.id}`, {
+      const res = await fetch(`${API}/${editingItem.id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
@@ -61,7 +61,7 @@ function App() {
   };
 
   const handleRemove = async (id) => {
-    await fetch(`₹{API}/₹{id}`, { method: "DELETE" });
+    await fetch(`${API}/${id}`, { method: "DELETE" });
     setItems((prev) => prev.filter((item) => item.id !== id));
     if (editingItem?.id === id) {
       setShowForm(false);

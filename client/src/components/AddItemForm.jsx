@@ -40,7 +40,7 @@ function AddItemForm({ onSubmit, onCancel, editingItem }) {
           />
         </div>
         <div className="form-group">
-          <label htmlFor="item-price">Price ₹ </label>
+          <label htmlFor="item-price">Price (₹)</label>
           <input
             id="item-price"
             type="number"

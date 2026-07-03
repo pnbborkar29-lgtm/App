@@ -27,12 +27,12 @@ function ShoppingCart({
           {items.map((item) => (
             <li
               key={item.id}
-              className={`item ${selectedId === item.id ? "selected" : ""}`}
+              className={`item ₹{selectedId === item.id ? "selected" : ""}`}
               onClick={() => onSelect(item)}
             >
               <div className="item-info">
                 <span className="item-name">{item.name}</span>
-                <span className="item-price">${item.price.toFixed(2)}</span>
+                <span className="item-price">₹{item.price.toFixed(2)}</span>
               </div>
               <div className="item-actions">
                 <button
@@ -60,7 +60,7 @@ function ShoppingCart({
       )}
 
       {items.length > 0 && (
-        <div className="total">Total: {total.toFixed(2)}</div>
+        <div className="total">Total ₹: {total.toFixed(2)}</div>
       )}
     </div>
   );

@@ -40,6 +40,12 @@ h1 {
   font-size: 1.25rem;
 }
 
+.cart-hint {
+  font-size: 0.8rem;
+  color: #6b7280;
+  margin-top: 2px;
+}
+
 .btn {
   padding: 8px 16px;
   border: none;

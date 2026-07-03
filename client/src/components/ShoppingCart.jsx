@@ -2,6 +2,7 @@ function ShoppingCart({
   items,
   selectedId,
   onSelect,
+  onEdit,
   onRemove,
   onAddClick,
 }) {
@@ -10,7 +11,10 @@ function ShoppingCart({
   return (
     <div className="cart">
       <div className="cart-header">
-        <h2>Shopping Cart</h2>
+        <div>
+          <h2>Shopping Cart</h2>
+          <p className="cart-hint">Item list — click a row to select, then edit below</p>
+        </div>
         <button className="btn btn-primary" onClick={onAddClick}>
           Add Item
         </button>
@@ -31,6 +35,15 @@ function ShoppingCart({
                 <span className="item-price">${item.price.toFixed(2)}</span>
               </div>
               <div className="item-actions">
+                <button
+                  className="btn btn-secondary"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    onEdit(item);
+                  }}
+                >
+                  Edit
+                </button>
                 <button
                   className="btn btn-danger"
                   onClick={(e) => {

@@ -26,6 +26,11 @@ function App() {
     setShowForm(true);
   };
 
+  const handleEdit = (item) => {
+    setEditingItem(item);
+    setShowForm(true);
+  };
+
   const handleCancel = () => {
     setShowForm(false);
     setEditingItem(null);
@@ -71,6 +76,7 @@ function App() {
         items={items}
         selectedId={editingItem?.id}
         onSelect={handleSelect}
+        onEdit={handleEdit}
         onRemove={handleRemove}
         onAddClick={handleAddClick}
       />

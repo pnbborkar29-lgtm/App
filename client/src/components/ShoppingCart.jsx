@@ -60,7 +60,7 @@ function ShoppingCart({
       )}
 
       {items.length > 0 && (
-        <div className="total">Total: ${total.toFixed(2)}</div>
+        <div className="total">Total: {total.toFixed(2)}</div>
       )}
     </div>
   );

@@ -18,7 +18,7 @@ app.post("/api/items", (req, res) => {
   const { name, price } = req.body;
 
   if (!name || price === undefined || price === "") {
-    return res.status(400).json({ error: "Name & price are required" });
+    return res.status(400).json({ error: "Name and price are required" });
   }
 
   const item = {
